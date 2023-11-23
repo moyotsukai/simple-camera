@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ck-2J-FIq">
+                                <rect key="frame" x="0.0" y="164" width="393" height="524"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2Ck-2J-FIq" secondAttribute="height" multiplier="3:4" id="1ku-et-qgC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxp-IQ-wg6">
+                                <rect key="frame" x="166.66666666666666" y="738" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="JlT-cq-ibq"/>
+                                    <constraint firstAttribute="height" constant="60" id="LWS-Ra-3vE"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="camera.fill" catalog="system" symbolScale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="cameraButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="mHL-Cd-IeY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnU-Yw-QJ6">
+                                <rect key="frame" x="303" y="743" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4WV-HG-x1f"/>
+                                    <constraint firstAttribute="width" constant="50" id="6rr-tQ-MaV"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="camera.rotate.fill" catalog="system" symbolScale="medium"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="reverseCamera" destination="BYZ-38-t0r" eventType="touchUpInside" id="2eT-k9-ase"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cxp-IQ-wg6" firstAttribute="centerY" secondItem="xnU-Yw-QJ6" secondAttribute="centerY" id="1AJ-wR-LQl"/>
+                            <constraint firstItem="2Ck-2J-FIq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PSL-YE-0uT"/>
+                            <constraint firstItem="2Ck-2J-FIq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="SBu-g2-u97"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cxp-IQ-wg6" secondAttribute="bottom" constant="20" id="bE2-uG-gBa"/>
+                            <constraint firstItem="cxp-IQ-wg6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fzB-MX-yDx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Ck-2J-FIq" secondAttribute="trailing" id="lHK-aK-7GK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xnU-Yw-QJ6" secondAttribute="trailing" constant="40" id="mGE-Vz-qOV"/>
+                            <constraint firstItem="2Ck-2J-FIq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wQn-Bt-RzP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Spx-Jd-Va6"/>
+                    <connections>
+                        <outlet property="previewLayerBackgroundView" destination="2Ck-2J-FIq" id="r8f-2y-BH3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.832061068702288" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.fill" catalog="system" width="128" height="93"/>
+        <image name="camera.rotate.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
